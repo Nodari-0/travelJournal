@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", serif; /* Font family */
+}
+header {
+  background-color: rgb(247, 74, 74);
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 26px;
+  text-transform: capitalize;
+  color: white;
+}
+main {
+  max-width: 800px;  /* Makes cards narrower */
+  margin: 0 auto;    /* Centers the content */
+  padding: 20px;     /* Adds some padding on the sides */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.card {
+  padding: 10px;
+  width: 670px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.342);
+  border-radius: 8px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  gap: 10px;
+  height: 100%;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.image {
+  height: auto;
+  padding: 10px;
+}
+img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.location {
+  display: flex;
+  gap: 10px;
+}
+.location-icon {
+  font-size: 18px !important;
+  color: #F55A5A;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.3))  /* More pronounced, directional shadow */
+         drop-shadow(0px 0px 8px rgba(245, 90, 90, 0.2));  /* Subtle glow effect */
+  margin-right: 2px;
+  position: relative;  /* Helps with shadow positioning */
+  z-index: 1;         /* Ensures shadow displays properly */
+}
+
+.entry {
+  display: flex;
+  padding: 40px;
+  gap: 20px;
+  border-bottom: 1px solid #F5F5F5;
+  min-height: fit-content;
+}
+
+.entry--image {
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.entry--content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.entry--location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 20px;
+}
+
+.entry--country {
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  gap: 4px;
+}
+
+.entry--location a {
+  color: #918E9B;
+  text-decoration-line: underline;
+  font-size: 0.8rem;
+}
+
+.entry--title {
+  font-size: 25px;
+  color: #2B283A;
+  margin: 0;
+}
+
+.entry--dates {
+  font-weight: 700;
+  margin: 0;
+}
+
+.entry--text {
+  font-size: 0.9rem;
+  color: #2B283A;
+  line-height: 150%;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .entry {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .entry--image {
+    width: 100%;
+    height: 200px;
+  }
+}
